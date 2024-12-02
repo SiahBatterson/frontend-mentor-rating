@@ -44,7 +44,6 @@ button {
 #rating-box {
   background-image: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
   border: 2px solid hsl(213, 19%, 18%);
-  font-size: 1.5vw;
   display: flex;
   padding: 20px;
   padding-top: 50px;
@@ -54,6 +53,20 @@ button {
   margin-top: 25vh;
   width: 25%;
   text-align: center;
+}
+
+#rating-showcase {
+  padding: 0px;
+  font-weight: 400;
+  width: 50%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
 }
 
 h1 {
