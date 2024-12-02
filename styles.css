@@ -100,8 +100,13 @@ p {
   color: black;
 }
 
-.rating-button:focus {
+.rating-button.active {
   background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+
+.rating-button.active:hover {
+  background-color: hsl(25, 97%, 53%);
   color: black;
 }
 

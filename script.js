@@ -17,6 +17,10 @@ const allButtons = document.querySelectorAll(".rating-button");
 allButtons.forEach((button) => {
   button.addEventListener("click", function (ev) {
     current_rating = ev.target.value;
+    allButtons.forEach((but) => {
+      but.classList.remove("active");
+    });
+    button.classList.add("active");
     console.log(`user rated: ${current_rating}`);
   });
 });
