@@ -1,19 +1,83 @@
-* {
+@font-face {
+  font-family: myFirstFont;
+  src: url(https://fonts.google.com/specimen/Overpass);
+}
+
+body {
+  font-family: myFirstFont;
+  font-weight: 400;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(216, 12%, 8%);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   flex: 1;
 }
 
+.Submit {
+  padding: 0px;
+  width: 70%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 15px;
+  margin-top: 10px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(216, 12%, 8%);
+}
+
 #rating-box {
+  background-color: hsl(213, 19%, 18%);
+  font-size: 1.5vw;
   display: flex;
-  flex-direction: column;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
   margin: auto;
-  padding: auto;
-  background-color: bisque;
-  width: 50%;
-  justify-content: center;
+  margin-top: 25vh;
+  width: 30%;
   text-align: left;
-  align-items: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3vw;
+  margin-bottom: 0px;
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  font-size: 1.2vw;
+  color: hsl(217, 12%, 63%);
+}
+
+#rating-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(0, 0%, 100%);
+}
+
+#rating-button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
+}
+
+.Submit:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+
+#rating-button:focus {
+  background-color: hsl(0, 0%, 100%);
+  color: black;
 }
 
 footer {
