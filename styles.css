@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+#rating-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+  background-color: bisque;
+  width: 50%;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  margin: auto;
+  padding: auto;
+}
