@@ -12,6 +12,34 @@ body {
   font-weight: 400;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+  list-style: none;
+  transition-duration: .1s;
+}
+
+nav {
+  color: #000;
+  background-color: #faebd7;
+  border-radius: 5px;
+  padding: 8px;
+  position: absolute;
+  top: 5%;
+  left: 46.5%;
+}
+
+nav:hover {
+  background-color: bisque;
+  border-radius: 3px;
+  transition-duration: .2s;
+}
+
 button:focus {
   outline: none;
 }
@@ -85,11 +113,19 @@ p {
 .rating-button:hover {
   color: #000;
   background-color: #fb7413;
+  transition-duration: .2s;
 }
 
-.Submit:hover, .rating-button.active {
+.Submit:hover {
   color: #000;
   background-color: #fff;
+  transition-duration: .2s;
+}
+
+.rating-button.active {
+  color: #000;
+  background-color: #fff;
+  transition-duration: .5s;
 }
 
 .rating-button.active:hover {
