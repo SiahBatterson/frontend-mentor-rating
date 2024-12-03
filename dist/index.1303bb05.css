@@ -1,0 +1,105 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("https://fonts.google.com/specimen/Overpass");
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #121417;
+  margin: 0;
+  padding: 0;
+  font-family: myFirstFont;
+  font-weight: 400;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.flex-container {
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  display: flex;
+}
+
+.Submit {
+  color: #121417;
+  background-color: #fb7413;
+  border-radius: 15px;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 12px 0;
+  font-weight: 700;
+}
+
+#rating-box {
+  text-align: center;
+  background-image: linear-gradient(#252d37, #121417);
+  border: 2px solid #252d37;
+  border-radius: 10px;
+  width: 25%;
+  margin: 25vh auto auto;
+  padding: 50px 20px 30px;
+  display: flex;
+}
+
+#rating-showcase {
+  color: #fb7413;
+  background-color: #252d37;
+  border-radius: 15px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 12px 0;
+  font-weight: 400;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 2.9vw;
+  font-weight: 700;
+}
+
+p {
+  color: #959eac;
+  font-size: 1.2vw;
+}
+
+.rating-button {
+  color: #fff;
+  background-color: #252d37;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.rating-button:hover {
+  color: #000;
+  background-color: #fb7413;
+}
+
+.Submit:hover, .rating-button.active {
+  color: #000;
+  background-color: #fff;
+}
+
+.rating-button.active:hover {
+  color: #000;
+  background-color: #fb7413;
+}
+
+footer {
+  margin: auto;
+  padding: auto;
+  display: flex;
+}
+/*# sourceMappingURL=index.1303bb05.css.map */

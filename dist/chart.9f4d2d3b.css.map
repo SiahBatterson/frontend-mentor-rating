@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;;AAKA","sources":["chart_style.css"],"sourcesContent":["* {\n  margin: auto;\n  padding: auto;\n  background-color: black;\n}\ncanvas {\n  display: flex;\n  background-color: papayawhip;\n  width: 100%;\n  height: 100vh;\n  justify-content: center;\n}\n"],"names":[],"version":3,"file":"chart.9f4d2d3b.css.map","sourceRoot":"/__parcel_source_root/"}

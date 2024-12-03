@@ -1,5 +1,5 @@
 submit_button = document.getElementById("Submission");
-thank_you = document.getElementById("thank-box");
+ratings = document.getElementById("thank-box");
 rating_box = document.getElementById("rating-box");
 
 var sent_image = document.createElement("img");
@@ -8,19 +8,17 @@ sent_image.setAttribute("height", "auto");
 sent_image.setAttribute("width", "auto");
 sent_image.setAttribute("alt", "Flower");
 
-thank_you.style.visibility = "hidden";
-
 var current_rating = 0;
 var final_value = 0;
 
 const allButtons = document.querySelectorAll(".rating-button");
 allButtons.forEach((button) => {
   button.addEventListener("click", function (ev) {
-    current_rating = ev.target.value;
     allButtons.forEach((but) => {
       but.classList.remove("active");
     });
     button.classList.add("active");
+    current_rating = parseInt(ev.target.value);
     console.log(`user rated: ${current_rating}`);
   });
 });
@@ -29,6 +27,8 @@ submit_button.addEventListener("click", myFunction);
 
 function myFunction() {
   final_value = current_rating;
+  localStorage.setItem("rating", final_value);
+
   console.log("should thank you now");
   switch_states();
 }

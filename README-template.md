@@ -1,13 +1,12 @@
-# Frontend Mentor - Interactive rating component solution
+# Frontend Mentor - Rating & Rating Display Program
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -16,9 +15,9 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+- Created an application for users to rate any given product, then also including a chart page to display the aggregated data so a user could see the generalized information.
 
 ### The challenge
 
@@ -31,83 +30,74 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![alt text](image.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/SiahBatterson/frontend-mentor-rating/tree/main)
+- Live Site URL: [Add live site URL here](https://siahbatterson.github.io/frontend-mentor-rating/)
 
 ## My process
+
+- First I like to get CSS styling down. This helps me viisualize all the information on the page so I can imagine how the components will work together.
+- After CSS Styling I like to add the debugging version of my CSS so I linked all the buttons together with console output.
+- After this I added the ability for the rating to be stored.
+- After this I tied up loose ends, added the finished page, and then looked up all thbe dynamic CSS styling things I was less familiar with the finish the site.
+- Then I added the extra feature using chart.js to visualize a sample set of user ratings with its own HTML page.
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Chart.js] (Used to aggregate and showcase data) - js library
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+Learned the value attribute of buttons:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<button class="rating-button" value="1">1</button>
 ```
+
+Also learned using nested psuedo classes to better control hover effects:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.rating-button.active:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
 }
 ```
+
+Also was able to dyanmically force classes and active states for buttons to create better interactivity.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const allButtons = document.querySelectorAll(".rating-button");
+allButtons.forEach((button) => {
+  button.addEventListener("click", function (ev) {
+    current_rating = ev.target.value;
+    allButtons.forEach((but) => {
+      but.classList.remove("active");
+    });
+    button.classList.add("active");
+    console.log(`user rated: ${current_rating}`);
+  });
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Storing data is a huge part of this project. The best future development would be enabling some sort of more exntended .json format that can store the data so chart.js can scale off that data and increase its usefullness.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Creating elements in HTML](https://stackoverflow.com/questions/9422974/createelement-with-id) - This helped me insert an `<img>` tag into my code.
+- [Remove class in JS](https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom) - This helped me clear all the rating buttons.
+- [InsertBefore] (https://stackoverflow.com/questions/618089/can-i-insert-elements-to-the-beginning-of-an-element-using-appendchild) - This helped me create better order for the HTML when inserting elements into the DOM via JS.
+- [Create Element] (https://stackoverflow.com/questions/7802744/adding-an-img-element-to-a-div-with-javascript) - More inserting element help.
+- [Value attribute in JS] (https://www.w3schools.com/tags/att_button_value.asp) - Learning about the value attribute to help with ratings.
+- [Inserting the font used int he project] (https://www.w3schools.com/css/css3_fonts.asp) - How to insert web based fonts into a project.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Josiah Batterson](https://github.com/SiahBatterson/)
