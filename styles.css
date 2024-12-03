@@ -12,6 +12,34 @@ body {
   background-color: hsl(216, 12%, 8%);
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  transition-duration: 0.1s;
+  color: black;
+  text-decoration: underline;
+  list-style: none;
+}
+
+nav {
+  color: black;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 46.5%;
+  background-color: antiquewhite;
+  padding: 8px;
+}
+
+nav:hover {
+  background-color: bisque;
+  transition-duration: 0.2s;
+  border-radius: 3px;
+}
+
 button:focus {
   outline: none;
 }
@@ -91,16 +119,19 @@ p {
 }
 
 .rating-button:hover {
+  transition-duration: 0.2s;
   background-color: hsl(25, 97%, 53%);
   color: black;
 }
 
 .Submit:hover {
+  transition-duration: 0.2s;
   background-color: hsl(0, 0%, 100%);
   color: black;
 }
 
 .rating-button.active {
+  transition-duration: 0.5s;
   background-color: hsl(0, 0%, 100%);
   color: black;
 }
